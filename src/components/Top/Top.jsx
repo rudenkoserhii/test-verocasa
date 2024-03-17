@@ -1,29 +1,34 @@
 import React from 'react'
-import 'components/News/news.scss'
-import news_x1 from 'assets/images/present/present_x1.png'
-import news_x2 from 'assets/images/present/present_x2.png'
-import news_x3 from 'assets/images/present/present_x3.png'
-import { Button } from 'components/Button/Button'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation, Pagination } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import 'components/Hero/hero.scss'
+import { MOCK_PRODUCTS } from 'consts'
+import { nanoid } from 'nanoid'
+import { TopSlide } from 'components/Top/TopSlide'
 
 export const Top = () => {
-  const onClickButton = () => console.log('До каталогу')
-
   return (
-    <section className="news__section">
-      <div className="news__content">
-        <h3 className="news__title">Ми знаємо, що сподобається вашим “великим” друзям!</h3>
-        <p className="news__paragraph">
-          Обирай подарунок своїм друзями бодібілдерам із нашою новою колекцію термобілизни “Big
-          warm”
-        </p>
-        <Button color="black" text="До каталогу" onClickButton={() => onClickButton()} />
-      </div>
-      <img
-        className="news__image"
-        srcSet={`${news_x1} 1x, ${news_x2} 2x, ${news_x3} 3x`}
-        src={news_x1}
-        alt="Man"
-      />
+    <section>
+      <Swiper
+        cssMode={true}
+        navigation={true}
+        slidesPerView={3}
+        spaceBetween={30}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Navigation, Pagination]}
+        className="top__swiper"
+      >
+        {MOCK_PRODUCTS.map((slide) => (
+          <SwiperSlide key={nanoid()}>
+            <TopSlide slide={slide} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </section>
   )
 }
