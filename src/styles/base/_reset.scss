@@ -34,6 +34,6 @@ display: block;
     &:focus {
         color: var(--text-placeholder);
 
-    transition: color var(--anim);
+        transition: color var(--anim);
     }
 }
