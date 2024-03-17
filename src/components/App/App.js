@@ -1,14 +1,22 @@
-import React from "react";
-// import './App.css';
+import React, { lazy } from 'react'
+import { Routes, Route } from 'react-router-dom'
+import { Layout } from 'components/Layout/Layout'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>Hello World</p>
-      </header>
-    </div>
-  );
-}
+const Home = lazy(() => import('pages/Home/Home'))
+const Products = lazy(() => import('pages/Products/Products'))
+const Product = lazy(() => import('pages/Product/Product'))
 
-export default App;
+const App = () => (
+  <Routes>
+    <Route path="/" element={<Layout />}>
+      <Route index element={<Home />} />
+      <Route path="/" element={<Home />} />
+      <Route path="*" element={<Home />} />
+      <Route path="products" element={<Products />}>
+        <Route path=":product" element={<Product />} />
+      </Route>
+    </Route>
+  </Routes>
+)
+
+export default App
