@@ -1,0 +1,47 @@
+.header__upper {
+    display: flex;
+        align-items: center;
+justify-content: space-between;
+
+    background-color: var(--bg-header);
+    border: var(--border-full-black);
+    box-shadow: var(--shadow-down);
+
+    padding: 16px 98px;
+}
+
+.header__help{
+    display: flex;
+    align-items: center;
+    gap: 23px;
+}
+
+.header__signs {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.header__link {
+    font-size: 12px;
+line-height: 1.333;
+
+&--sign {
+        color: var(--bg-symbols);
+    }
+
+&--tel {
+color: var(--bg-main);
+text-shadow: var(--stroke);
+
+white-space: nowrap;
+
+
+}
+
+&--help {
+    color: var(--bg-main);
+}
+}
+
+

@@ -31,6 +31,8 @@ img {
 
     &:hover,
     &:focus {
-        color: var(--cl-txt-accent-dark);
+        color: var(--text-placeholder);
+
+    transition: color var(--anim);
     }
 }
