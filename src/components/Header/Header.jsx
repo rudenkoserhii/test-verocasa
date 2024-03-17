@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import 'components/Header/header.scss'
-import { CONTACTS, NAVS } from 'consts'
+import { CONTACTS } from 'consts'
 import { ReactComponent as IconSearch } from 'assets/icons/loop.svg'
 import { ReactComponent as IconReset } from 'assets/icons/reset.svg'
 import { ReactComponent as IconHeart } from 'assets/icons/heart.svg'
 import { ReactComponent as IconBag } from 'assets/icons/bag.svg'
-import { NavLink } from 'react-router-dom'
+import { Nav } from 'components/Nav/Nav'
 
 export const Header = () => {
   const [value, setValue] = useState('')
@@ -73,15 +73,7 @@ export const Header = () => {
         <a className="link header__logo" href="/">
           {'ignat'.toUpperCase()}
         </a>
-        <nav className="list header__nav">
-          {Object.values(NAVS).map((nav, idx) => (
-            <li key={idx}>
-              <NavLink className="link header__item" to={nav.href}>
-                {nav.title.toUpperCase()}
-              </NavLink>
-            </li>
-          ))}
-        </nav>
+        <Nav placement="header" />
         <div className="header__search">
           <label htmlFor="search" className="header__label">
             <input

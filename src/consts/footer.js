@@ -1,34 +1,28 @@
 export const FOOTER = [
   {
-    buyer: {
-      title: 'Покупцям',
-      menu: [
-        { title: 'Оплата і доставка', href: '/' },
-        { title: 'Повернення', href: '/' },
-        { title: 'Питання та відповіді', href: '/' },
-      ],
-    },
+    title: 'Покупцям',
+    menu: [
+      { title: 'Оплата і доставка', href: '/delivery' },
+      { title: 'Повернення', href: '/returns' },
+      { title: 'Питання та відповіді', href: '/q-and-a' },
+    ],
   },
   {
-    personal_cabinet: {
-      title: 'Особистий кабінет',
-      menu: [
-        { title: 'Мої дані', href: '/' },
-        { title: 'Історія замовлень', href: '/' },
-        { title: 'Улюблені', href: '/' },
-        { title: 'Розсилки', href: '/' },
-      ],
-    },
+    title: 'Особистий кабінет',
+    menu: [
+      { title: 'Мої дані', href: '/cabinet' },
+      { title: 'Історія замовлень', href: '/history' },
+      { title: 'Улюблені', href: '/favorite' },
+      { title: 'Розсилки', href: '/subscriptions' },
+    ],
   },
   {
-    about_us: {
-      title: 'Про компанію',
-      menu: [
-        { title: 'Про нас', href: '/' },
-        { title: 'Новини', href: '/' },
-        { title: 'Стати партнером', href: '/' },
-        { title: 'Угода користувача', href: '/' },
-      ],
-    },
+    title: 'Про компанію',
+    menu: [
+      { title: 'Про нас', href: '/about' },
+      { title: 'Новини', href: '/news' },
+      { title: 'Стати партнером', href: '/partnership' },
+      { title: 'Угода користувача', href: '/agreement' },
+    ],
   },
 ]

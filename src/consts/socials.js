@@ -1,7 +1,9 @@
-export { ReactComponent as Instagram } from 'assets/icons/instagram.svg'
+import { ReactComponent as Instagram } from 'assets/icons/instagram.svg'
+import { ReactComponent as Whatsap } from 'assets/icons/whatsup.svg'
+import { ReactComponent as Telegram } from 'assets/icons/telegram.svg'
 
 export const SOCIALS = {
-  instagram: { icon: 'assets/icons/instagram.svg', href: '/', title: 'instagram' },
-  whatsap: { icon: 'assets/icons/whatsap.svg', href: '/', title: 'whatsap' },
-  telegram: { icon: 'assets/icons/telegram.svg', href: '/', title: 'telegram' },
+  instagram: { Icon: Instagram, href: '/instagram', title: 'instagram' },
+  whatsap: { Icon: Whatsap, href: '/whatsap', title: 'whatsap' },
+  telegram: { Icon: Telegram, href: '/telegram', title: 'telegram' },
 }
