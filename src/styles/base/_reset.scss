@@ -24,6 +24,7 @@ img {
 }
 
 .link {
+display: block;
     text-decoration: none;
     color: inherit;
 
@@ -31,6 +32,8 @@ img {
 
     &:hover,
     &:focus {
-        color: var(--cl-txt-accent-dark);
+        color: var(--text-placeholder);
+
+    transition: color var(--anim);
     }
 }
