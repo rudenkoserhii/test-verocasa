@@ -1,10 +1,11 @@
 import React, { Suspense } from 'react'
 import { Outlet } from 'react-router-dom'
+import 'components/Main/main.scss'
 
 export const Main = () => (
-  <div>
+  <main>
     <Suspense fallback={null}>
       <Outlet />
     </Suspense>
-  </div>
+  </main>
 )

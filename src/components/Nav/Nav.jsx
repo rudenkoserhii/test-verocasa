@@ -6,10 +6,10 @@ import PropTypes from 'prop-types'
 
 export const Nav = ({ placement }) => {
   return (
-    <nav className={`list header__nav ${placement}`}>
+    <nav className={`list nav ${placement}`}>
       {Object.values(NAVS).map((nav, idx) => (
         <li key={idx}>
-          <NavLink className={`link header__item ${placement}`} to={nav.href}>
+          <NavLink className={`link nav__item ${placement}`} to={nav.href}>
             {nav.title.toUpperCase()}
           </NavLink>
         </li>
