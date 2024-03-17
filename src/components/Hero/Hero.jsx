@@ -10,7 +10,7 @@ import { nanoid } from 'nanoid'
 import { HeroSlide } from 'components/Hero/HeroSlide'
 
 export const Hero = () => (
-  <section>
+  <section className="section hero__section">
     <Swiper
       cssMode={true}
       navigation={true}

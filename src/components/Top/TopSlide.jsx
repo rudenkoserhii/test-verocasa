@@ -30,8 +30,8 @@ export const TopSlide = ({ slide }) => {
       </button>
       <img className="top__image" srcSet={`${x1} 1x, ${x2} 2x, ${x3} 3x`} src={x1} alt="Wear" />
       <div className="top__content">
-        <h4 className="top__title">{name}</h4>
-        <h5 className="top__whom">{whom}</h5>
+        <h4 className="top__title">{name.replace(name[0], name[0].toUpperCase())}</h4>
+        <p className="top__whom">{whom.replace(whom[0], whom[0].toUpperCase())}</p>
         <p className="top__colors">{renderColorsOrWeight()}</p>
         <p className="top__paragraph">{`${price} грн.`}</p>
       </div>

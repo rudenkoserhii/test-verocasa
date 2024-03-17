@@ -4,14 +4,14 @@ import { Navigation, Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import 'components/Hero/hero.scss'
+import 'components/Top/top.scss'
 import { MOCK_PRODUCTS } from 'consts'
 import { nanoid } from 'nanoid'
 import { TopSlide } from 'components/Top/TopSlide'
 
 export const Top = () => {
   return (
-    <section>
+    <section className="section top__section">
       <Swiper
         cssMode={true}
         navigation={true}
