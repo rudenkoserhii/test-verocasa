@@ -19,7 +19,7 @@ export const MOCK_OPINIONS = [
     avatar_x1: avatar_01_x1,
     avatar_x2: avatar_01_x2,
     avatar_x3: avatar_01_x3,
-    stars: 4,
+    stars: 1,
   },
   {
     name: 'Жора Ремінгтон 3',
@@ -28,7 +28,7 @@ export const MOCK_OPINIONS = [
     avatar_x1: avatar_01_x1,
     avatar_x2: avatar_01_x2,
     avatar_x3: avatar_01_x3,
-    stars: 4,
+    stars: 2,
   },
   {
     name: 'Жора Ремінгтон 4',
@@ -37,7 +37,7 @@ export const MOCK_OPINIONS = [
     avatar_x1: avatar_01_x1,
     avatar_x2: avatar_01_x2,
     avatar_x3: avatar_01_x3,
-    stars: 4,
+    stars: 5,
   },
   {
     name: 'Жора Ремінгтон 5',

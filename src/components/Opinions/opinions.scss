@@ -1,32 +1,122 @@
-.news__section {
+.opinions__swiper {
+    padding: 0px 98px 80px 98px;
+}
+
+.opinions__wrapper {
+background-color: var(--bg-opinions);
+
+border-radius: 10px;
+border: var(--border-full-black);
+
+padding: 30px 37px;
+}
+
+.opinions__head {
+    position: relative;
+
     display: flex;
-        align-items: center;
+    align-items: center;
+    justify-content: space-between;
 
-padding: 20px 98px 80px 98px;
-
-height: 381px;
+    padding: 0px 98px;
+    margin-bottom: 31px;
 }
 
-.news__image {
-width: 570px;
-height: 371px;
-object-fit: cover;
+.opinions__counting {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+
+    width: 150px;
 }
 
-.news__content {
+.opinions__info {
+display: flex;
+align-items: center;
+justify-content: flex-start;
+gap: 20px;
+
+margin-bottom: 30px;
+}
+
+.opinions__content {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 10px;
 
 }
 
-.news__title {
-font-size: 38px;
-line-height: 1.316;
+.opinions__stars {
+display: flex;
+    align-items: center;
+    justify-content: center;
+gap: 3px;
+}
 
-margin-bottom: 30px;}
+.opinions__image {
+    width: 50px;
+height: 50px;
 
-.news__paragraph {
+}
+
+.opinions__text {
+
 font-size: 16px;
 line-height: 1.5;
 
-margin-bottom: 40px;
+color: var(--text-footer);
 }
 
+.opinions__title {
+    font-size: 20px;
+    line-height: 1.5;
+
+}
+
+
+.opinions__swiper-button-next,
+.opinions__swiper-button-prev {
+    all: unset;
+    cursor: pointer;
+
+    position: absolute;
+    top: 50%;
+    z-index: 15;
+
+    transform: translateY(-50%);
+    z-index: 15;
+
+
+    &:disabled {
+        opacity: 0.35;
+        cursor: auto;
+        pointer-events: none;
+    }
+
+    &>svg {
+        display: block;
+
+        width: 25px;
+
+        fill: var(--text-main);
+
+        transition: var(--anim);
+
+        &:hover,
+        &:focus {
+            fill: var(--text-placeholder);
+
+            transition: var(--anim);
+        }
+    }
+}
+
+.opinions__swiper-button-next {
+    right: 98px;
+}
+
+.opinions__swiper-button-prev {
+    right: 143px;
+}
