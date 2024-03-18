@@ -1,9 +1,26 @@
 .subscription__section {
+position: relative;
+
 width: 570px;
 margin-left: auto;
 margin-right: auto;
 padding-top: 90px;
 padding-bottom: 108px;
+
+&::before {
+content: '';
+width: calc(100vw - 196px);
+height: 1px;
+
+background-color: var(--bg-line);
+
+position: absolute;
+top: 0;
+left: 50%;
+
+transform: translateX(-50%);
+
+}
 }
 
 .subscription__title {
