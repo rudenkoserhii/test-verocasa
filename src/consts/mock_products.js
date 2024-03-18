@@ -1,90 +1,40 @@
+import product_01_01_medium_x1 from 'assets/images/product/product_01-01_medium_x1.png'
+import product_01_01_medium_x2 from 'assets/images/product/product_01-01_medium_x2.png'
+import product_01_01_medium_x3 from 'assets/images/product/product_01-01_medium_x3.png'
+
+import product_01_02_medium_x1 from 'assets/images/product/product_01-02_medium_x1.png'
+import product_01_02_medium_x2 from 'assets/images/product/product_01-02_medium_x2.png'
+import product_01_02_medium_x3 from 'assets/images/product/product_01-02_medium_x3.png'
+
+import product_01_03_medium_x1 from 'assets/images/product/product_01-03_medium_x1.png'
+import product_01_03_medium_x2 from 'assets/images/product/product_01-03_medium_x2.png'
+import product_01_03_medium_x3 from 'assets/images/product/product_01-03_medium_x3.png'
+
+import product_01_01_small_x1 from 'assets/images/product/product_01-01_small_x1.png'
+import product_01_01_small_x2 from 'assets/images/product/product_01-01_small_x2.png'
+import product_01_01_small_x3 from 'assets/images/product/product_01-01_small_x3.png'
+
+import product_01_02_small_x1 from 'assets/images/product/product_01-02_small_x1.png'
+import product_01_02_small_x2 from 'assets/images/product/product_01-02_small_x2.png'
+import product_01_02_small_x3 from 'assets/images/product/product_01-02_small_x3.png'
+
+import product_01_03_small_x1 from 'assets/images/product/product_01-03_small_x1.png'
+import product_01_03_small_x2 from 'assets/images/product/product_01-03_small_x2.png'
+import product_01_03_small_x3 from 'assets/images/product/product_01-03_small_x3.png'
+
+import product_01_01_big_x1 from 'assets/images/product/product_01-01_big_x1.png'
+import product_01_01_big_x2 from 'assets/images/product/product_01-01_big_x2.png'
+import product_01_01_big_x3 from 'assets/images/product/product_01-01_big_x3.png'
+
+import product_02_01_medium_x1 from 'assets/images/product/product_02-01_medium_x1.png'
+import product_02_01_medium_x2 from 'assets/images/product/product_02-01_medium_x2.png'
+import product_02_01_medium_x3 from 'assets/images/product/product_02-01_medium_x3.png'
+
+import product_03_01_medium_x1 from 'assets/images/product/product_03-01_medium_x1.png'
+import product_03_01_medium_x2 from 'assets/images/product/product_03-01_medium_x2.png'
+import product_03_01_medium_x3 from 'assets/images/product/product_03-01_medium_x3.png'
+
 export const MOCK_PRODUCTS = [
-  {
-    name: 'чоловічий термокостюм',
-    art: 'MW0MW32780',
-    category: 'одяг',
-    subcategory: 'термобілизна',
-    type: 'термокостюм',
-    brand: 'atlantic',
-    gender: 'чоловіки',
-    for: 'Для чоловіків',
-    price: 3700,
-    weight: null,
-    isFavorite: false,
-    sizes: [
-      { title: 'xxs', quantity: { black: 0, grey: 1, white: 2 } },
-      { title: 'xs', quantity: { black: 0, grey: 1, white: 2 } },
-      { title: 's', quantity: { black: 0, grey: 1, white: 2 } },
-      { title: 'm', quantity: { black: 0, grey: 1, white: 2 } },
-      { title: 'l', quantity: { black: 0, grey: 1, white: 2 } },
-      { title: 'xl', quantity: { black: 0, grey: 1, white: 2 } },
-      { title: 'xxl', quantity: { black: 0, grey: 0, white: 0 } },
-    ],
-    colors: ['black', 'grey', 'white'],
-    description: [
-      {
-        title: 'Терморегуляція забезпечить вам тепло в будь-якій ситуації.',
-        text: 'Сучасні технології дозволяють нашому термокостюму адаптуватися до вашого тіла та навколишнього середовища.',
-      },
-      {
-        title: 'Легкість та еластичність для максимальної свободи рухів.',
-        text: 'Забудьте про невигоди - наш термокостюм розроблений з урахуванням вашої активності.',
-      },
-      {
-        title: 'Дихаючі тканини для оптимальної вентиляції.',
-        text: 'Забудьте про  потовиділення - наш термокостюм дозволяє шкірі "дихати", забезпечуючи вам комфорт під час активної діяльності.',
-      },
-    ],
-    images: [
-      {
-        small: {
-          1: {
-            x1: 'assets/images/product/product_01-01_small_x1.png',
-            x2: 'assets/images/product/product_01-01_small_x2.png',
-            x3: 'assets/images/product/product_01-01_small_x3.png',
-          },
-          2: {
-            x1: 'assets/images/product/product_01-02_small_x1.png',
-            x2: 'assets/images/product/product_01-02_small_x2.png',
-            x3: 'assets/images/product/product_01-02_small_x3.png',
-          },
-          3: {
-            x1: 'assets/images/product/product_01-03_small_x1.png',
-            x2: 'assets/images/product/product_01-03_small_x2.png',
-            x3: 'assets/images/product/product_01-03_small_x3.png',
-          },
-        },
-      },
-      {
-        medium: {
-          1: {
-            x1: 'assets/images/product/product_01-01_medium_x1.png',
-            x2: 'assets/images/product/product_01-01_medium_x2.png',
-            x3: 'assets/images/product/product_01-01_medium_x3.png',
-          },
-          2: {
-            x1: 'assets/images/product/product_01-02_medium_x1.png',
-            x2: 'assets/images/product/product_01-02_medium_x2.png',
-            x3: 'assets/images/product/product_01-02_medium_x3.png',
-          },
-          3: {
-            x1: 'assets/images/product/product_01-03_medium_x1.png',
-            x2: 'assets/images/product/product_01-03_medium_x2.png',
-            x3: 'assets/images/product/product_01-03_medium_x3.png',
-          },
-        },
-      },
-      {
-        big: {
-          1: {
-            x1: 'assets/images/product/product_01-01_big_x1.png',
-            x2: 'assets/images/product/product_01-01_big_x2.png',
-            x3: 'assets/images/product/product_01-01_big_x3.png',
-          },
-        },
-      },
-    ],
-  },
   {
     name: 'термобілизна для бодібілдерів',
     art: 'MW0MW32781',
@@ -93,10 +43,10 @@ export const MOCK_PRODUCTS = [
     type: 'термокостюм',
     brand: 'puma',
     gender: 'чоловіки',
-    for: 'Для чоловіків',
+    whom: 'для чоловіків',
     price: 4000,
     weight: null,
-    isFavorite: false,
+    isFavorite: true,
     sizes: [
       { title: 'xxs', quantity: { black: 0, grey: 1 } },
       { title: 'xs', quantity: { black: 0, grey: 1 } },
@@ -123,49 +73,49 @@ export const MOCK_PRODUCTS = [
     ],
     images: [
       {
-        small: {
-          1: {
-            x1: 'assets/images/product/product_01-01_small_x1.png',
-            x2: 'assets/images/product/product_01-01_small_x2.png',
-            x3: 'assets/images/product/product_01-01_small_x3.png',
+        medium: {
+          photo_01: {
+            x1: product_01_01_medium_x1,
+            x2: product_01_01_medium_x2,
+            x3: product_01_01_medium_x3,
           },
-          2: {
-            x1: 'assets/images/product/product_01-02_small_x1.png',
-            x2: 'assets/images/product/product_01-02_small_x2.png',
-            x3: 'assets/images/product/product_01-02_small_x3.png',
+          photo_02: {
+            x1: product_01_02_medium_x1,
+            x2: product_01_02_medium_x2,
+            x3: product_01_02_medium_x3,
           },
-          3: {
-            x1: 'assets/images/product/product_01-03_small_x1.png',
-            x2: 'assets/images/product/product_01-03_small_x2.png',
-            x3: 'assets/images/product/product_01-03_small_x3.png',
+          photo_03: {
+            x1: product_01_03_medium_x1,
+            x2: product_01_03_medium_x2,
+            x3: product_01_03_medium_x3,
           },
         },
       },
       {
-        medium: {
-          1: {
-            x1: 'assets/images/product/product_01-01_medium_x1.png',
-            x2: 'assets/images/product/product_01-01_medium_x2.png',
-            x3: 'assets/images/product/product_01-01_medium_x3.png',
+        small: {
+          photo_01: {
+            x1: product_01_01_small_x1,
+            x2: product_01_01_small_x2,
+            x3: product_01_01_small_x3,
           },
-          2: {
-            x1: 'assets/images/product/product_01-02_medium_x1.png',
-            x2: 'assets/images/product/product_01-02_medium_x2.png',
-            x3: 'assets/images/product/product_01-02_medium_x3.png',
+          photo_02: {
+            x1: product_01_02_small_x1,
+            x2: product_01_02_small_x2,
+            x3: product_01_02_small_x3,
           },
-          3: {
-            x1: 'assets/images/product/product_01-03_medium_x1.png',
-            x2: 'assets/images/product/product_01-03_medium_x2.png',
-            x3: 'assets/images/product/product_01-03_medium_x3.png',
+          photo_03: {
+            x1: product_01_03_small_x1,
+            x2: product_01_03_small_x2,
+            x3: product_01_03_small_x3,
           },
         },
       },
       {
         big: {
-          1: {
-            x1: 'assets/images/product/product_01-01_big_x1.png',
-            x2: 'assets/images/product/product_01-01_big_x2.png',
-            x3: 'assets/images/product/product_01-01_big_x3.png',
+          photo_01: {
+            x1: product_01_01_big_x1,
+            x2: product_01_01_big_x2,
+            x3: product_01_01_big_x3,
           },
         },
       },
@@ -179,7 +129,7 @@ export const MOCK_PRODUCTS = [
     type: 'топ',
     brand: 'nike',
     gender: 'жінки',
-    for: 'Для жінок',
+    whom: 'для жінок',
     price: 1100,
     weight: null,
     isFavorite: false,
@@ -210,10 +160,10 @@ export const MOCK_PRODUCTS = [
     images: [
       {
         medium: {
-          1: {
-            x1: 'assets/images/product/product_02-01_medium_x1.png',
-            x2: 'assets/images/product/product_02-01_medium_x2.png',
-            x3: 'assets/images/product/product_02-01_medium_x3.png',
+          photo_01: {
+            x1: product_02_01_medium_x1,
+            x2: product_02_01_medium_x2,
+            x3: product_02_01_medium_x3,
           },
         },
       },
@@ -227,7 +177,7 @@ export const MOCK_PRODUCTS = [
     type: 'ланцюг',
     brand: 'prada',
     gender: 'аксесуари',
-    for: 'аксесуари',
+    whom: 'аксесуари',
     price: 2000,
     weight: 30,
     isFavorite: false,
@@ -254,10 +204,96 @@ export const MOCK_PRODUCTS = [
     images: [
       {
         medium: {
-          1: {
-            x1: 'assets/images/product/product_03-01_medium_x1.png',
-            x2: 'assets/images/product/product_03-01_medium_x2.png',
-            x3: 'assets/images/product/product_03-01_medium_x3.png',
+          photo_01: {
+            x1: product_03_01_medium_x1,
+            x2: product_03_01_medium_x2,
+            x3: product_03_01_medium_x3,
+          },
+        },
+      },
+    ],
+  },
+  {
+    name: 'чоловічий термокостюм',
+    art: 'MW0MW32780',
+    category: 'одяг',
+    subcategory: 'термобілизна',
+    type: 'термокостюм',
+    brand: 'atlantic',
+    gender: 'чоловіки',
+    whom: 'для чоловіків',
+    price: 3700,
+    weight: null,
+    isFavorite: false,
+    sizes: [
+      { title: 'xxs', quantity: { black: 0, grey: 1, white: 2 } },
+      { title: 'xs', quantity: { black: 0, grey: 1, white: 2 } },
+      { title: 's', quantity: { black: 0, grey: 1, white: 2 } },
+      { title: 'm', quantity: { black: 0, grey: 1, white: 2 } },
+      { title: 'l', quantity: { black: 0, grey: 1, white: 2 } },
+      { title: 'xl', quantity: { black: 0, grey: 1, white: 2 } },
+      { title: 'xxl', quantity: { black: 0, grey: 0, white: 0 } },
+    ],
+    colors: ['black', 'grey', 'white'],
+    description: [
+      {
+        title: 'Терморегуляція забезпечить вам тепло в будь-якій ситуації.',
+        text: 'Сучасні технології дозволяють нашому термокостюму адаптуватися до вашого тіла та навколишнього середовища.',
+      },
+      {
+        title: 'Легкість та еластичність для максимальної свободи рухів.',
+        text: 'Забудьте про невигоди - наш термокостюм розроблений з урахуванням вашої активності.',
+      },
+      {
+        title: 'Дихаючі тканини для оптимальної вентиляції.',
+        text: 'Забудьте про  потовиділення - наш термокостюм дозволяє шкірі "дихати", забезпечуючи вам комфорт під час активної діяльності.',
+      },
+    ],
+    images: [
+      {
+        medium: {
+          photo_01: {
+            x1: product_01_01_medium_x1,
+            x2: product_01_01_medium_x2,
+            x3: product_01_01_medium_x3,
+          },
+          photo_02: {
+            x1: product_01_02_medium_x1,
+            x2: product_01_02_medium_x2,
+            x3: product_01_02_medium_x3,
+          },
+          photo_03: {
+            x1: product_01_03_medium_x1,
+            x2: product_01_03_medium_x2,
+            x3: product_01_03_medium_x3,
+          },
+        },
+      },
+      {
+        small: {
+          photo_01: {
+            x1: product_01_01_small_x1,
+            x2: product_01_01_small_x2,
+            x3: product_01_01_small_x3,
+          },
+          photo_02: {
+            x1: product_01_02_small_x1,
+            x2: product_01_02_small_x2,
+            x3: product_01_02_small_x3,
+          },
+          photo_03: {
+            x1: product_01_03_small_x1,
+            x2: product_01_03_small_x2,
+            x3: product_01_03_small_x3,
+          },
+        },
+      },
+      {
+        big: {
+          photo_01: {
+            x1: product_01_01_big_x1,
+            x2: product_01_01_big_x2,
+            x3: product_01_01_big_x3,
           },
         },
       },

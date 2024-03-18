@@ -1,14 +1,89 @@
 .hero__swiper {
 height: 100%;
 overflow: visible;
+
+& > .hero__pagination {
+position: absolute;
+width: fit-content;
+        gap: 10px;
+left: 50%;
+bottom: -8px;
+
+transform: translateX(-50%);
+
+        & > .swiper-pagination-bullet {
+            background-color: var(--text-footer);
+
+            border-radius: 1.5px;
+            height: 3px;
+            width: 15px;
+
+            transition: var(--anim);
+
+            &-active {
+                pointer-events: none;
+
+                background-color: var(--text-placeholder);
+            }
+
+            &:hover,
+            &:focus {
+                background-color: var(--text-placeholder);
+
+                transition: var(--anim);
+            }
+        }
+    }
+
+
+}
+
+   .hero__swiper-button-next,
+   .hero__swiper-button-prev {
+all: unset;
+cursor: pointer;
+
+position: absolute;
+top: 50%;
+z-index: 15;
+
+transform: translateY(-50%);
+
+&:disabled {
+    opacity: 0.35;
+        cursor: auto;
+        pointer-events: none;
+}
+       & > svg {
+display: block;
+
+height: 29px;
+
+fill: var(--bg-main);
+
+       transition: var(--anim);
+
+       &:hover,
+       &:focus {
+           fill: var(--text-placeholder);
+
+           transition: var(--anim);
+       }}
+   }
+
+.hero__swiper-button-next {
+right: 64px;
+}
+.hero__swiper-button-prev {
+left: 64px;
 }
 
 .hero__wrapper {
     height: 440px;
 
-font-family: 'Inter', sans-serif;
+    font-family: 'Inter', sans-serif;
 
-color: var(--bg-main);
+    color: var(--bg-main);
 }
 
 .hero__container {
@@ -77,40 +152,5 @@ line-height: 1;
 white-space: nowrap;
 }
 
-.swiper-pagination {
-gap: 10px;
-bottom: -8px !important;
-&-bullet {
-background-color: var(--text-footer);
 
-border-radius: 1.5px;
-height: 3px;
-width: 15px;
-
-transition: var(--anim);
-
-&-active {
-pointer-events: none;
-
-background-color: var(--text-placeholder);
-}
-
-&:hover, &:focus {
-background-color: var(--text-placeholder);
-
-    transition: var(--anim);
-}
-}
-}
-
-.swiper-button-next, .swiper-button-prev {
-color: var(--bg-main);
-
-transition: var(--anim);
-&:hover, &:focus {
-color: var(--text-placeholder);
-
-transition: var(--anim);
-}
-}
 
