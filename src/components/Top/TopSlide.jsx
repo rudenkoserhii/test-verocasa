@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { ReactComponent as IconHeart } from 'assets/icons/heart.svg'
+import { ReactComponent as IconHeartEmpty } from 'assets/icons/heart.svg'
+import { ReactComponent as IconHeartFilled } from 'assets/icons/heart_filled.svg'
 
 export const TopSlide = ({ slide }) => {
-  const { name, whom, colors, weight, price, isFavorite, images } = slide
+  const { art, name, whom, colors, weight, price, isFavorite, images } = slide
   const { x1, x2, x3 } = images[0].medium.photo_01
+  const [isFavoriteValue, setIsFavoriteValue] = useState(isFavorite)
 
   const renderColorsOrWeight = () => {
     if (weight) {
@@ -23,24 +25,36 @@ export const TopSlide = ({ slide }) => {
     }
   }
 
+  const handleFavoriteClick = (event) => {
+    event.stopPropagation()
+    setIsFavoriteValue(!isFavoriteValue)
+  }
+
   return (
     <div className="top__wrapper">
-      <button className={`top_favorite ${isFavorite}`}>
-        <IconHeart className="top__favorite--icon" />
+      <button className={`top__favorite ${isFavorite}`} onClick={handleFavoriteClick}>
+        {isFavoriteValue ? (
+          <IconHeartFilled className="top__favorite--icon" />
+        ) : (
+          <IconHeartEmpty className="top__favorite--icon" />
+        )}
       </button>
-      <img className="top__image" srcSet={`${x1} 1x, ${x2} 2x, ${x3} 3x`} src={x1} alt="Wear" />
-      <div className="top__content">
-        <h4 className="top__title">{name.replace(name[0], name[0].toUpperCase())}</h4>
-        <p className="top__whom">{whom.replace(whom[0], whom[0].toUpperCase())}</p>
-        <p className="top__colors">{renderColorsOrWeight()}</p>
-        <p className="top__paragraph">{`${price} грн.`}</p>
-      </div>
+      <a href={`/products/product/${art}`} className="link">
+        <img className="top__image" srcSet={`${x1} 1x, ${x2} 2x, ${x3} 3x`} src={x1} alt="Wear" />
+        <div className="top__content">
+          <h4 className="top__title">{name.replace(name[0], name[0].toUpperCase())}</h4>
+          <p className="top__whom">{whom.replace(whom[0], whom[0].toUpperCase())}</p>
+          <p className="top__colors">{renderColorsOrWeight()}</p>
+          <p className="top__paragraph">{`${price} грн.`}</p>
+        </div>
+      </a>
     </div>
   )
 }
 
 TopSlide.propTypes = {
   slide: PropTypes.shape({
+    art: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     whom: PropTypes.string,
     colors: PropTypes.arrayOf(PropTypes.string),

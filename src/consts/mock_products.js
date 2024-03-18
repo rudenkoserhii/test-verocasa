@@ -46,7 +46,7 @@ export const MOCK_PRODUCTS = [
     whom: 'для чоловіків',
     price: 4000,
     weight: null,
-    isFavorite: false,
+    isFavorite: true,
     sizes: [
       { title: 'xxs', quantity: { black: 0, grey: 1 } },
       { title: 'xs', quantity: { black: 0, grey: 1 } },
