@@ -1,122 +1,116 @@
 .opinions__swiper {
-    padding: 0px 98px 80px 98px;
+  padding: 0px 98px 80px 98px;
 }
 
 .opinions__wrapper {
-background-color: var(--bg-opinions);
+  background-color: var(--bg-opinions);
 
-border-radius: 10px;
-border: var(--border-full-black);
+  border-radius: 10px;
+  border: var(--border-full-black);
 
-padding: 30px 37px;
+  padding: 30px 37px;
 }
 
 .opinions__head {
-    position: relative;
+  position: relative;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    padding: 0px 98px;
-    margin-bottom: 31px;
+  padding: 0px 98px;
+  margin-bottom: 31px;
 }
 
 .opinions__counting {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
 
-    width: 150px;
+  width: 150px;
 }
 
 .opinions__info {
-display: flex;
-align-items: center;
-justify-content: flex-start;
-gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
 
-margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .opinions__content {
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-gap: 10px;
-
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
 }
 
 .opinions__stars {
-display: flex;
-    align-items: center;
-    justify-content: center;
-gap: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
 }
 
 .opinions__image {
-    width: 50px;
-height: 50px;
-
+  width: 50px;
+  height: 50px;
 }
 
 .opinions__text {
+  font-size: 16px;
+  line-height: 1.5;
 
-font-size: 16px;
-line-height: 1.5;
-
-color: var(--text-footer);
+  color: var(--text-footer);
 }
 
 .opinions__title {
-    font-size: 20px;
-    line-height: 1.5;
-
+  font-size: 20px;
+  line-height: 1.5;
 }
-
 
 .opinions__swiper-button-next,
 .opinions__swiper-button-prev {
-    all: unset;
-    cursor: pointer;
+  all: unset;
+  cursor: pointer;
 
-    position: absolute;
-    top: 50%;
-    z-index: 15;
+  position: absolute;
+  top: 50%;
+  z-index: 15;
 
-    transform: translateY(-50%);
-    z-index: 15;
+  transform: translateY(-50%);
+  z-index: 15;
 
+  &:disabled {
+    opacity: 0.35;
+    cursor: auto;
+    pointer-events: none;
+  }
 
-    &:disabled {
-        opacity: 0.35;
-        cursor: auto;
-        pointer-events: none;
+  & > svg {
+    display: block;
+
+    width: 25px;
+
+    fill: var(--text-main);
+
+    transition: var(--anim);
+
+    &:hover,
+    &:focus {
+      fill: var(--text-placeholder);
+
+      transition: var(--anim);
     }
-
-    &>svg {
-        display: block;
-
-        width: 25px;
-
-        fill: var(--text-main);
-
-        transition: var(--anim);
-
-        &:hover,
-        &:focus {
-            fill: var(--text-placeholder);
-
-            transition: var(--anim);
-        }
-    }
+  }
 }
 
 .opinions__swiper-button-next {
-    right: 98px;
+  right: 98px;
 }
 
 .opinions__swiper-button-prev {
-    right: 143px;
+  right: 143px;
 }

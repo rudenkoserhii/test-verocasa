@@ -1,156 +1,149 @@
 .hero__swiper {
-height: 100%;
-overflow: visible;
+  height: 100%;
+  overflow: visible;
 
-& > .hero__pagination {
-position: absolute;
-width: fit-content;
-        gap: 10px;
-left: 50%;
-bottom: -8px;
+  & > .hero__pagination {
+    position: absolute;
+    width: fit-content;
+    gap: 10px;
+    left: 50%;
+    bottom: -8px;
 
-transform: translateX(-50%);
+    transform: translateX(-50%);
 
-        & > .swiper-pagination-bullet {
-            background-color: var(--text-footer);
+    & > .swiper-pagination-bullet {
+      background-color: var(--text-footer);
 
-            border-radius: 1.5px;
-            height: 3px;
-            width: 15px;
+      border-radius: 1.5px;
+      height: 3px;
+      width: 15px;
 
-            transition: var(--anim);
+      transition: var(--anim);
 
-            &-active {
-                pointer-events: none;
-
-                background-color: var(--text-placeholder);
-            }
-
-            &:hover,
-            &:focus {
-                background-color: var(--text-placeholder);
-
-                transition: var(--anim);
-            }
-        }
-    }
-
-
-}
-
-   .hero__swiper-button-next,
-   .hero__swiper-button-prev {
-all: unset;
-cursor: pointer;
-
-position: absolute;
-top: 50%;
-z-index: 15;
-
-transform: translateY(-50%);
-
-&:disabled {
-    opacity: 0.35;
-        cursor: auto;
+      &-active {
         pointer-events: none;
+
+        background-color: var(--text-placeholder);
+      }
+
+      &:hover,
+      &:focus {
+        background-color: var(--text-placeholder);
+
+        transition: var(--anim);
+      }
+    }
+  }
 }
-       & > svg {
-display: block;
 
-height: 29px;
+.hero__swiper-button-next,
+.hero__swiper-button-prev {
+  all: unset;
+  cursor: pointer;
 
-fill: var(--bg-main);
+  position: absolute;
+  top: 50%;
+  z-index: 15;
 
-       transition: var(--anim);
+  transform: translateY(-50%);
 
-       &:hover,
-       &:focus {
-           fill: var(--text-placeholder);
+  &:disabled {
+    opacity: 0.35;
+    cursor: auto;
+    pointer-events: none;
+  }
+  & > svg {
+    display: block;
 
-           transition: var(--anim);
-       }}
-   }
+    height: 29px;
+
+    fill: var(--bg-main);
+
+    transition: var(--anim);
+
+    &:hover,
+    &:focus {
+      fill: var(--text-placeholder);
+
+      transition: var(--anim);
+    }
+  }
+}
 
 .hero__swiper-button-next {
-right: 64px;
+  right: 64px;
 }
 .hero__swiper-button-prev {
-left: 64px;
+  left: 64px;
 }
 
 .hero__wrapper {
-    height: 440px;
+  height: 440px;
 
-    font-family: 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif;
 
-    color: var(--bg-main);
+  color: var(--bg-main);
 }
 
 .hero__container {
+  height: 424px;
 
-    height: 424px;
-
-    background-repeat: no-repeat;
-    background-position: top left;
-    background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
 }
 
 .hero__content {
-display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    padding: 20px 198px 85px 198px;
+  padding: 20px 198px 85px 198px;
 }
 
 .hero__leftside {
-display: flex;
-flex-direction: column;
-gap: 40px;
-max-width: 470px;
-
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 470px;
 }
 
 .hero__title {
-font-size: 64px;
-line-height: 1.2;
-font-weight: 900;
+  font-size: 64px;
+  line-height: 1.2;
+  font-weight: 900;
 }
 
 .hero__subtitle {
-font-size: 64px;
-font-weight: 300;
-line-height: 1;
+  font-size: 64px;
+  font-weight: 300;
+  line-height: 1;
 
-white-space: nowrap;
+  white-space: nowrap;
 }
 
 .hero__rightside {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .hero__discount {
-font-size: 40px;
-font-weight: 300;
-line-height: 1;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 1;
 
-padding: 15px 34px;
-background-color: rgba(255,255,255,0.3);
+  padding: 15px 34px;
+  background-color: rgba(255, 255, 255, 0.3);
 
-white-space: nowrap;
+  white-space: nowrap;
 }
 
 .hero__paragraph {
-font-size: 20px;
-font-weight: 400;
-line-height: 1;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
 
-white-space: nowrap;
+  white-space: nowrap;
 }
-
-
-
