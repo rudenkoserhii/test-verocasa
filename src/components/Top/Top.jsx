@@ -46,7 +46,6 @@ export const Top = () => {
         className="top__swiper"
         onSlideChange={(swiper) => {
           seCurrentPage(swiper.activeIndex + 1)
-          console.log(swiper)
         }}
       >
         {MOCK_PRODUCTS.map((slide) => (

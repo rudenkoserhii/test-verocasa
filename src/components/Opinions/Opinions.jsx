@@ -1,29 +1,61 @@
-import React from 'react'
-import 'components/News/news.scss'
-import news_x1 from 'assets/images/present/present_x1.png'
-import news_x2 from 'assets/images/present/present_x2.png'
-import news_x3 from 'assets/images/present/present_x3.png'
-import { Button } from 'components/Button/Button'
+import React, { useState } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import 'components/Opinions/opinions.scss'
+import { MOCK_OPINIONS } from 'consts'
+import { nanoid } from 'nanoid'
+import { OpinionsSlide } from 'components/Opinions/OpinionsSlide'
+import { ReactComponent as Left } from 'assets/icons/arrow_left_top.svg'
+import { ReactComponent as Right } from 'assets/icons/arrow_right_top.svg'
+
+const FIRST_PAGE = 1
 
 export const Opinions = () => {
-  const onClickButton = () => console.log('До каталогу')
+  const [currentPage, seCurrentPage] = useState(FIRST_PAGE)
 
   return (
-    <section className="news__section">
-      <div className="news__content">
-        <h3 className="news__title">Ми знаємо, що сподобається вашим “великим” друзям!</h3>
-        <p className="news__paragraph">
-          Обирай подарунок своїм друзями бодібілдерам із нашою новою колекцію термобілизни “Big
-          warm”
+    <section className="section opinions__section">
+      <div className="opinions__head">
+        <h3 className="opinions__title">Відгуги наших клієнтів</h3>
+        <p className="opinions__counting">
+          <span className="opinions__counting--current">
+            {currentPage.toString().padStart(2, '0')}
+          </span>
+          <span className="opinions__counting--symbol">{'/'}</span>
+          <span className="opinions__counting--all">
+            {(currentPage + 3).toString().padStart(2, '0')}
+          </span>
         </p>
-        <Button color="black" text="До каталогу" onClickButton={() => onClickButton()} />
+        <button className="opinions__swiper-button-prev">
+          <Left />
+        </button>
+        <button className="opinions__swiper-button-next">
+          <Right />
+        </button>
       </div>
-      <img
-        className="news__image"
-        srcSet={`${news_x1} 1x, ${news_x2} 2x, ${news_x3} 3x`}
-        src={news_x1}
-        alt="Man"
-      />
+      <Swiper
+        cssMode={true}
+        navigation={{
+          nextEl: '.opinions__swiper-button-next',
+          prevEl: '.opinions__swiper-button-prev',
+        }}
+        slidesPerView={4}
+        spaceBetween={30}
+        modules={[Navigation]}
+        className="opinions__swiper"
+        onSlideChange={(swiper) => {
+          seCurrentPage(swiper.activeIndex + 1)
+        }}
+      >
+        {MOCK_OPINIONS.map((slide) => (
+          <SwiperSlide key={nanoid()}>
+            <OpinionsSlide slide={slide} seCurrentPage={(value) => seCurrentPage(value)} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </section>
   )
 }
